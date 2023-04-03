@@ -1,0 +1,65 @@
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+
+  
+    <!-- Jumbotron -->
+    <div class="container py-4">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card cascading-right" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);
+              ">
+            <div class="card-body p-5 shadow-5 text-center">
+              <h1 class="fw-bold mb-5" style="font-size: 30px;">Registrar</h1>
+              <form [formGroup]="registrar">
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline"> 
+                      <input type="text"class="form-control" placeholder="Ingresar Nombre" required/>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" class="form-control"  placeholder="Ingresa Apellidos" required />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="email" class="form-control" formControlName="email" placeholder="Ingresa email" required />
+                </div>
+  
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="password" class="form-control" formControlName="password" placeholder="Ingresa password" required />
+
+                </div>
+  
+                <!-- Submit button -->
+                <button type="submit" [disabled]="registrar.invalid" (click)="registrarUsuario()" class="btn btn-primary btn-block mb-4">
+                  Registrar
+                </button>
+                <!-- Register buttons -->
+                <div class="text-center">
+                  <p>regresar a 
+                  <button type="button" class="btn btn-link btn-floating"><a href="/login">login</a></button>
+                  </p>
+                        
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4"
+            alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->

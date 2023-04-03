@@ -1,0 +1,49 @@
+ <!-- Movil -->
+ <div class="show-mobile">
+  <div>
+    <button (click)="toggleMenu()">
+        <img width="50px" src="https://cdn.icon-icons.com/icons2/916/PNG/512/Menu_icon_icon-icons.com_71858.png" alt="menu">
+    </button>
+    <a href="/home">
+      <img width="50px" src="https://www.ejemplos.co/wp-content/uploads/2015/11/Logo-Apple.jpg" alt="logo">
+    </a>
+    <a href="">
+      <img width="50px" src="https://img2.freepng.es/20180518/kcx/kisspng-e-commerce-computer-icons-download-online-shopping-5aff8da79dd487.8640147015266973836465.jpg" alt="logo">
+    </a>
+  </div>
+ </div>
+
+<div class="side-menu" [class.active]="showMenu">
+<button (click)="toggleMenu()" >close</button>
+<ul>
+  <li><a href="/home">all</a></li>
+  <li><a href="/home">pianos</a></li>
+  <li><a href="/home">Guitarras</a></li>
+</ul>
+</div>
+
+<!-- escritorio -->
+ <div class="hide-mobile">
+  <div>
+    <nav>
+      <a href="/home">
+        <img width="50px" src="https://www.ejemplos.co/wp-content/uploads/2015/11/Logo-Apple.jpg" alt="logo">
+      </a>
+  
+      <ul>
+        <li><a href="/home">all</a></li>
+        <li><a href="/home">pianos</a></li>
+        <li><a href="/home">Guitarras</a></li>
+      </ul>
+    </nav>
+    <div class="info">
+      <div>
+        <a href="/home">
+          <img width="50px" src="https://img2.freepng.es/20180518/kcx/kisspng-e-commerce-computer-icons-download-online-shopping-5aff8da79dd487.8640147015266973836465.jpg" alt="logo">
+        </a>
+        <span class="counter">{{counter}}</span>
+      </div>
+
+    </div>
+  </div>
+ </div>

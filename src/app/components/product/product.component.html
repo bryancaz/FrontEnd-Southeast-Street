@@ -1,0 +1,32 @@
+<!-- <img width="200" [src]="product.img" alt=""> -->
+<!-- <app-img [img]="product.image"></app-img> -->
+<app-img [img]="product.img"></app-img>
+
+<div class="row  justify-content-around">
+    <div class="col-6">
+        <h2>{{product.precio | currency: 'MXN'}} </h2>
+    </div>
+    <div class="col-6">
+        <h2>{{ product.precio | currency: 'US'}}</h2>
+    </div>
+</div>
+
+<!-- <p>{{product.nombre | reverse}}</p> -->
+<p>{{product.nombre }}</p>
+<p appHighLight>{{product.descripcion }}</p>
+
+<div class="row  justify-content-center">
+    <div class="col-7">
+        <button class="button p-button-sm p-button-success  " color="sucess" type="button" pButton
+            (click)="onAddToCart()">Add Carrito</button>
+    </div>
+    <br />
+    <div class="col-6">
+        <button class="button p-button-sm p-button-danger " type="button" pButton
+            (click)="deleteProduct(product.id)">Eliminar</button>
+    </div>
+    <div class="col-6">
+        <button class="button p-button-sm p-button-warning" type="button" pButton
+            (click)="updateProduct(product.id)">Editar</button>
+    </div>
+</div>
